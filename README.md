@@ -421,3 +421,88 @@ Trong tương lai, hệ thống có thể mở rộng với:
 - IoT Medical Devices
 - National Healthcare Integration
 - Smart Healthcare Analytics
+
+# 10. Software Requirements Specification (SRS)
+
+Tài liệu Đặc tả Yêu cầu Phần mềm (Software Requirements Specification - SRS) mô tả chi tiết các yêu cầu nghiệp vụ, chức năng, phi chức năng, kiến trúc hệ thống, cơ sở dữ liệu và các quy trình vận hành của hệ thống.
+
+## 📄 Tài liệu SRS chính thức
+
+🔗 https://docs.google.com/document/d/1kbtBontra8iTb4ulpPyiAzlwkh3mkByHqzxNKZs_jEc/edit?tab=t.0
+
+---
+
+## 10.1. Nội dung chính trong tài liệu SRS
+
+### Giới thiệu hệ thống
+- Mục tiêu dự án
+- Phạm vi hệ thống
+- Đối tượng sử dụng
+- Thuật ngữ và định nghĩa
+
+### Phân tích yêu cầu nghiệp vụ
+- Quy trình đặt lịch khám
+- Tiếp nhận bệnh nhân
+- Khám chữa bệnh
+- Quản lý hồ sơ bệnh án (EMR)
+- Thanh toán viện phí
+- Quản lý hàng đợi
+
+### Actor & Use Case
+- Patient
+- Doctor
+- Receptionist
+- Admin
+- AI Service
+
+Bao gồm đầy đủ Use Case Diagram và mô tả luồng xử lý của từng chức năng.
+
+### Đặc tả chức năng
+- Authentication & Authorization
+- Patient Management
+- Appointment Management
+- Medical Record Management
+- Prescription Management
+- Payment Management
+- Queue Management
+- AI Features
+- Dashboard & Reporting
+
+### Yêu cầu phi chức năng
+- Performance
+- Security
+- Scalability
+- Availability
+- Maintainability
+
+### Thiết kế cơ sở dữ liệu
+- ERD Diagram
+- Database Schema
+- Data Dictionary
+- Quan hệ giữa các bảng dữ liệu
+
+### Kiến trúc hệ thống
+- Frontend Architecture
+- Backend Architecture
+- AI Service Architecture
+- API Design
+- Realtime Communication
+
+### Kiểm thử hệ thống
+- Unit Testing
+- Integration Testing
+- System Testing
+- UAT Testing
+- Security Testing
+
+---
+
+## 10.2. Mục đích của tài liệu SRS
+
+- Chuẩn hóa yêu cầu hệ thống.
+- Là tài liệu tham chiếu cho BA, Developer và Tester.
+- Hỗ trợ thiết kế Database, API và UI/UX.
+- Giảm sai lệch trong quá trình phát triển.
+- Là cơ sở để bảo trì và mở rộng hệ thống trong tương lai.
+
+> Tài liệu SRS được cập nhật xuyên suốt quá trình phát triển để đảm bảo phản ánh chính xác các yêu cầu và thay đổi của dự án.
