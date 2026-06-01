@@ -506,3 +506,7 @@ Bao gồm đầy đủ Use Case Diagram và mô tả luồng xử lý của từ
 - Là cơ sở để bảo trì và mở rộng hệ thống trong tương lai.
 
 > Tài liệu SRS được cập nhật xuyên suốt quá trình phát triển để đảm bảo phản ánh chính xác các yêu cầu và thay đổi của dự án.
+
+#11 Overleaf
+
+https://www.overleaf.com/read/tbykdvwkhncb#35196c
