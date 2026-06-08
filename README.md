@@ -313,15 +313,8 @@ Mỗi task đều được:
 
 ---
 
-# 6. Thiết kế giao diện & Front-end
 
-## Figma Design
-
-🔗 [Nhấn vào đây để xem thiết kế Figma](https://www.figma.com/design/6V9DorJbuMl9s1RsRChfE9/Untitled?node-id=0-1&p=f&t=UC3FtmaVzKCceyE1-0)
-
----
-
-# 6.1. Cấu trúc thư mục Front-end
+# 6. Cấu trúc thư mục Front-end
 
 ```text
 frontend/
