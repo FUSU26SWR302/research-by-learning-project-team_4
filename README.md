@@ -284,7 +284,7 @@ Toàn bộ task của dự án được quản lý theo mô hình Agile/Scrum.
 
 ## Jira Board
 
-🔗 [Nhấn vào đây để truy cập Jira Board](https://ngmanhcuong300906.atlassian.net/jira/software/projects/SCRUM/boards/1?jql=assignee%20%3D%20empty)
+🔗 [Nhấn vào đây để truy cập Jira Board](https://ngmanhcuong300906.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
 
 ---
 
