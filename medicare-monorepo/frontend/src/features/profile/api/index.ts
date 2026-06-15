@@ -22,7 +22,12 @@ export const profileApi = {
     api.delete('/profile/avatar').then(r => r.data),
 
   changePassword: (currentPassword: string, newPassword: string) =>
-    api.put('/profile/change-password', { currentPassword, newPassword }).then(r => r.data),
+    api
+      .put<{ success: boolean; message: string }>('/profile/change-password', {
+        currentPassword,
+        newPassword,
+      })
+      .then((r) => r.data),
 
   getSettings: async (): Promise<SystemSettings> => ({
     language: 'vi', dataSharing: true,

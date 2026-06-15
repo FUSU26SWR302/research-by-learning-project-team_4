@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, ArrowRight, Star, CheckCircle, Heart, Eye, Brain, Baby, Bone, ChevronRight, Stethoscope, Users, Sparkles } from 'lucide-react';
 import MainLayout from '../../../components/layout/MainLayout';
+import HeroBackground from './HeroBackground';
+import HeroStatCard from './HeroStatCard';
 import { Card, Avatar } from '../../../components/ui';
 import Button from '../../../components/ui/Button';
 
@@ -35,47 +37,59 @@ const STATS = [
 const HomePage: React.FC = () => (
   <MainLayout>
     {/* Hero — chỉ giới thiệu + CTA, không nhét search vào đây */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#1a56db] via-[#1e40af] to-[#312e81]">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl -translate-y-1/2 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-indigo-400/20 blur-3xl translate-y-1/3" />
-      </div>
-      <div className="container relative z-10 py-12 sm:py-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+    <section className="relative min-h-[34rem] overflow-hidden sm:min-h-[38rem] lg:min-h-[42rem]">
+      <HeroBackground />
+      <div className="container relative z-10 flex min-h-[inherit] items-center py-14 sm:py-16 lg:py-20">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           <div className="max-w-xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-blue-50 text-xs font-medium border border-white/20 mb-5">
-              <Sparkles size={14} /> Tích hợp AI thế hệ mới
+            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-cyan-50 shadow-[0_0_20px_rgba(34,211,238,0.15)] backdrop-blur-sm">
+              <Sparkles size={14} className="text-cyan-200" />
+              Tích hợp AI thế hệ mới
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-4" style={{ fontFamily: 'Lexend' }}>
-              Phòng khám thông minh tích hợp AI
+            <h1
+              className="mb-5 text-3xl font-bold leading-[1.15] tracking-tight text-white drop-shadow-sm sm:text-4xl lg:text-[2.85rem]"
+              style={{ fontFamily: 'Lexend' }}
+            >
+              Phòng khám thông minh
+              <span className="mt-1 block bg-gradient-to-r from-cyan-200 via-white to-sky-200 bg-clip-text text-transparent">
+                tích hợp AI
+              </span>
             </h1>
-            <p className="text-blue-100 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="mb-8 max-w-md text-base leading-relaxed text-slate-200/90 sm:text-lg">
               Kết nối bạn với đội ngũ bác sĩ chuyên nghiệp — đặt lịch nhanh, tư vấn sức khỏe thông minh mọi lúc.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/dang-ky">
-                <Button size="lg" variant="secondary" rightIcon={<ArrowRight size={16} />}>
+                <Button
+                  size="lg"
+                  className="border-0 bg-gradient-to-r from-cyan-400 to-sky-500 text-white shadow-lg shadow-cyan-500/30 hover:from-cyan-300 hover:to-sky-400 hover:shadow-cyan-400/40 active:scale-[0.98]"
+                  rightIcon={<ArrowRight size={16} />}
+                >
                   Đặt lịch ngay
                 </Button>
               </Link>
               <Link to="/bac-si">
-                <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/15 hover:text-white">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/50 bg-white/5 text-white backdrop-blur-sm hover:border-white/70 hover:bg-white/15 hover:text-white"
+                >
                   Tìm bác sĩ
                 </Button>
               </Link>
             </div>
           </div>
-          <div className="hidden lg:grid grid-cols-2 gap-3">
-            {STATS.map((s) => {
-              const Icon = s.icon;
-              return (
-                <div key={s.val} className="rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 p-5">
-                  <Icon size={22} className="text-blue-200 mb-3" />
-                  <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Lexend' }}>{s.val}</div>
-                  <div className="text-xs text-blue-100 mt-1">{s.label}</div>
-                </div>
-              );
-            })}
+
+          <div className="hidden lg:grid grid-cols-2 gap-3.5">
+            {STATS.map((s, index) => (
+              <HeroStatCard
+                key={s.val}
+                value={s.val}
+                label={s.label}
+                icon={s.icon}
+                delay={index * 80}
+              />
+            ))}
           </div>
         </div>
       </div>

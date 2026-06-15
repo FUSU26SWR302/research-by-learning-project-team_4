@@ -8,7 +8,7 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children, hideFooter = false }) => (
-  <div className="min-h-screen flex flex-col">
+  <div className="min-h-screen flex flex-col bg-[var(--bg-main)] text-[var(--text-primary)] transition-colors duration-200">
     <Navbar />
     <main className="flex-1">{children}</main>
     {!hideFooter && <Footer />}

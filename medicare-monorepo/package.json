@@ -4,12 +4,12 @@
   "description": "Medicare AI Clinic - Fullstack Monorepo",
   "private": true,
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run dev --prefix backend\" \"npm run start --prefix frontend\"",
-    "start": "concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
-    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
-    "build": "npm run build --prefix frontend",
-    "backend": "npm run dev --prefix backend",
-    "frontend": "npm run start --prefix frontend"
+    "dev": "concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run dev --prefix BE\" \"npm run start --prefix FE\"",
+    "start": "concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run start --prefix BE\" \"npm run start --prefix FE\"",
+    "install:all": "npm install && npm install --prefix BE && npm install --prefix FE",
+    "build": "npm run build --prefix FE",
+    "backend": "npm run dev --prefix BE",
+    "frontend": "npm run start --prefix FE"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

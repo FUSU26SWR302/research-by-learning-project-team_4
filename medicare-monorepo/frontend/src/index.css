@@ -18,6 +18,15 @@
   --radius-md: 12px;
 }
 
+.dark {
+  --primary-light: #1e3a5f;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --border: #334155;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
@@ -43,8 +52,41 @@ input, select, textarea { font-family: inherit; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+@keyframes heroGlowPulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+
+.hero-glow {
+  animation: heroGlowPulse 8s ease-in-out infinite;
+}
+
+.hero-glow-delayed {
+  animation: heroGlowPulse 10s ease-in-out infinite 2s;
+}
+
+.hero-image {
+  animation: heroImageZoom 24s ease-in-out infinite alternate;
+}
+
+@keyframes heroImageZoom {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.06); }
+}
+
+@keyframes heroStatFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-stat-card {
+  animation: heroStatFadeIn 0.6s ease both;
+}
+
 .fade-in { animation: fadeIn 0.4s ease both; }
+
 .animate-spin { animation: spin 1s linear infinite; }
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }

@@ -32,7 +32,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ children, className = '', hover = false, padding = 'md' }) => {
   const paddings = { none: '', sm: 'p-4', md: 'p-6', lg: 'p-8' };
   return (
-    <div className={`bg-white rounded-2xl border border-gray-100 shadow-sm ${hover ? 'hover:shadow-md hover:-translate-y-0.5 transition-all duration-200' : ''} ${paddings[padding]} ${className}`}>
+    <div className={`bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 shadow-sm ${hover ? 'hover:shadow-md hover:-translate-y-0.5 transition-all duration-200' : ''} ${paddings[padding]} ${className}`}>
       {children}
     </div>
   );
