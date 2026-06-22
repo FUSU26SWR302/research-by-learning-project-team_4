@@ -502,4 +502,4 @@ Bao gồm đầy đủ Use Case Diagram và mô tả luồng xử lý của từ
 
 #11 Overleaf
 
-[https://www.overleaf.com/read/tbykdvwkhncb#35196c](https://www.overleaf.com/read/xksgtmxjqxsm#346725)
+https://www.overleaf.com/read/xksgtmxjqxsm#346725
